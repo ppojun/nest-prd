@@ -1,0 +1,32 @@
+@local=localhost:3000
+
+### Create
+POST http://{{local}}/product/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"iphone",
+    "description":"sample",
+    "price":"100",
+    "id":1
+}
+
+### Get All
+GET http://{{local}}/product/all HTTP/1.1
+Content-Type: application/json
+
+### Get One
+GET http://{{local}}/product/2 HTTP/1.1
+Content-Type: application/json
+
+### update 
+PATCH http://{{local}}/product/edit/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "price":"50"
+}
+
+### delete
+DELETE http://{{local}}/product/delete/1 HTTP/1.1
+Content-Type: application/json
